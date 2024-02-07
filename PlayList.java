@@ -170,7 +170,6 @@ class PlayList {
                 {
                     min=this.tracks[i].getDuration();
                     min_index=i;
-                    System.out.println("min i :"+i+ "min"+min);
                 }
             }
             return min_index;
