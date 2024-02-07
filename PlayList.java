@@ -188,12 +188,12 @@ class PlayList {
      *  rather than returning a new, sorted playlist, the method sorts
      *  the list on which it was called (this list). */
     public void sortedInPlace() {
-        for (int i=0;i<maxSize;i++){
+        Track index_value;
+        for (int i=0;i<size;i++){
             int min=minIndex(i);
-            Track min_value;
-            min_value=tracks[i];
+            index_value=tracks[i];
             tracks[i]=tracks[min];
-            tracks[min]=tracks[i];
+            tracks[min]=index_value;
             }
         }
 }
