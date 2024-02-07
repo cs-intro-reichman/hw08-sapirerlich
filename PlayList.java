@@ -165,9 +165,9 @@ class PlayList {
     private int minIndex(int start) {
         int min=0;
         int min_index=0;
-        if (start<size-1)
+        if (start<size)
         {
-            for (int i=start-1; i<size; i++){
+            for (int i=start; i<size; i++){
                 if (tracks[i].getDuration()<min)
                     min=tracks[i].getDuration();
                     min_index=i;
@@ -189,7 +189,7 @@ class PlayList {
      *  the list on which it was called (this list). */
     public void sortedInPlace() {
         for (int i=0;i<maxSize;i++){
-            int min=minIndex(i+1);
+            int min=minIndex(i);
             Track min_value;
             min_value=tracks[i];
             tracks[i]=tracks[min];
