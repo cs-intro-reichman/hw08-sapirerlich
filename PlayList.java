@@ -58,7 +58,6 @@ class PlayList {
      public void removeLast() {
         if (size>0){
             remove(size);
-            size--;
         }
     }
 
@@ -113,7 +112,6 @@ class PlayList {
                 for (int j=i; j<size;j++){
                     tracks[j]=tracks[j+1];
                 }
-                tracks[i]=null;
                 size--;
             }
             else{
