@@ -167,8 +167,11 @@ class PlayList {
         {
             for (int i=start; i<this.size; i++){
                 if (this.tracks[i].getDuration()<min)
+                {
                     min=this.tracks[i].getDuration();
                     min_index=i;
+                    System.out.println("min i :"+i+ "min"+min);
+                }
             }
             return min_index;
         }
@@ -194,4 +197,6 @@ class PlayList {
             tracks[min]=tracks[i];
             }
         }
-    }
+}
+
+    
