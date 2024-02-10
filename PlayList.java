@@ -48,8 +48,7 @@ class PlayList {
     public String toString() {
         String output="";
         for (int i=0; i<size;i++){
-            output= output+ tracks[i].getArtist()+", "+ tracks[i].getTitle()+", "+tracks[i].getDuration();
-            output=output+"/n";
+            output= output+ tracks[i].toString()+"/n";
         }
         return output;
     }
