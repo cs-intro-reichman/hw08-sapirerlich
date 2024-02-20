@@ -48,7 +48,7 @@ class PlayList {
     public String toString() {
         String output="";
         for (int i=0; i<size;i++){
-            output= output+ tracks[i].toString()+"/n";
+            output= output+ tracks[i].toString()+"/n"; // not good, use StringBuilder
         }
         return output;
     }
@@ -88,6 +88,9 @@ class PlayList {
      *  is full, does nothing and returns false. Otherwise, inserts the track and
      *  returns true. */
     public boolean add(int i, Track track) {
+        /* We usually dont like to put the entire code function inside an if
+        we go on negation, if not the condition then return false, otherwise the code of the function. 
+        */
         if (((size>0)||(size==0 & i==0)) && (i<maxSize))
         {
             for (int j=i+1;j<maxSize-1;j++)
@@ -114,6 +117,7 @@ class PlayList {
                 size--;
             }
             else{
+                /* why do you delete the list? we said do nothing */
                 for (int j=0; j<maxSize;j++){
                     tracks[j]=null;
                 }
